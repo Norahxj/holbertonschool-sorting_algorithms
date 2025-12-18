@@ -1,99 +1,167 @@
-# Sorting Algorithms Project
+# 🚀🔢 Sorting Algorithms & Big O 🔢🚀
 
-i## Project Overview
-This project focuses on implementing different sorting algorithms in C and analyzing their time complexity using Big O notation.
+## 📌 Project Description
 
-The project includes sorting algorithms for both arrays and doubly linked lists, following the project requirements.
+Welcome to the **Sorting Algorithms & Big O** project!
+In this project, we dive into the world of **sorting algorithms** and learn how to measure their performance using **Big O notation**.
 
----
+The goal isn’t just to make numbers line up nicely, but it’s to truly understand:
 
-## Authors
-- Noura Implemented tasks 0 and 1  
-- Manar Implemented tasks 2 and 3  
-
----
-
-## Technologies Used
-- Language: C
-- Compiler: gcc
-- Style: Betty style
-- OS: Ubuntu 20.04 LTS
-
----
-## Project Files
-
-| File Name | Description |
-|---------|-------------|
-| sort.h  | Header file containing data structures and function prototypes |
-| 0-bubble_sort.c | Bubble Sort algorithm |
-| 0-O | Time complexity for Bubble Sort |
-| 1-insertion_sort_list.c | Insertion Sort for doubly linked list |
-| 1-O | Time complexity for Insertion Sort |
-| 2-selection_sort.c | Selection Sort algorithm |
-| 2-O | Time complexity for Selection Sort |
-| 3-quick_sort.c | Quick Sort algorithm (Lomuto scheme) |
-| 3-O | Time complexity for Quick Sort |
-| README.md | Project documentation |
-
----
-## sort.h
-The sort.h header file includes:
-- Definition of the listint_t doubly linked list structure
-- Prototypes for all required sorting functions
-- Prototypes for helper printing functions
+* 🧠 *How* sorting algorithms work
+* ⏱️ *How fast* (or slow) they are
+* 🧩 *When* to use each one
 
 ---
 
-## Implemented Algorithms
+## 🎯 Learning Objectives:
 
-### Bubble Sort
-Sorts an array by repeatedly swapping adjacent elements.
-
-Time Complexity
-- Best: O(n)
-- Average: O(n²)
-- Worst: O(n²)
+* 🔁 Explain at least **four different sorting algorithms**
+* 📈 Understand **Big O notation** and analyze algorithm efficiency
+* 🧪 Choose the **best sorting algorithm** for a given input
+* 🔒 Explain what a **stable sorting algorithm** is
+* 🔗 Understand the difference between sorting **arrays** and **linked lists**
 
 ---
 
-### Insertion Sort (Doubly Linked List)
-Sorts a doubly linked list by inserting elements in their correct position.
+## ⚙️ Environment & Constraints:
 
-Time Complexity
-- Best: O(n)
-- Average: O(n²)
-- Worst: O(n²)
+* 🧠 **Language:** C
+* 🐧 **OS:** Ubuntu 20.04 LTS
+* 🛠️ **Compiler:** gcc
+* 🧪 **Compilation flags:**
 
----
+  ```bash
+  -Wall -Wextra -Werror -pedantic -std=gnu89
+  ```
+* ✨ **Code style:** Betty style
+* ✍️ **Editors allowed:** vi, vim, emacs
 
-### Selection Sort
-Selects the minimum element and places it at the correct position.
+### ❌ Restrictions:
 
-Time Complexity
-- Best: O(n²)
-- Average: O(n²)
-- Worst: O(n²)
-
----
-
-### Quick Sort (Lomuto Partition)
-A divide-and-conquer sorting algorithm using recursion.
-
-Time Complexity
-- Best: O(n log n)
-- Average: O(n log n)
-- Worst: O(n²)
+* 🚫 No global variables
+* 🚫 No more than **5 functions per file**
+* 🚫 No standard library functions like `printf`, `puts`, etc.
+* 🚫 Do **not** modify the integer values in list nodes (swap nodes instead!)
+* ✅ All files must end with a **newline**
 
 ---
 
-## Big O Notation Files
-Each *-O file contains:
-1. Best case complexity
-2. Average case complexity
-3. Worst case complexity
+## 📁 Project Files
+
+| 📄 File                   | 📌 Description                                      |
+| ------------------------- | --------------------------------------------------- |
+| `sort.h`                  | Header file with all prototypes and data structures |
+| `0-bubble_sort.c`         | Bubble sort implementation for arrays               |
+| `0-O`                     | Big O notation for Bubble sort                      |
+| `1-insertion_sort_list.c` | Insertion sort for doubly linked lists              |
+| `1-O`                     | Big O notation for Insertion sort                   |
+| `2-selection_sort.c`      | Selection sort implementation                       |
+| `2-O`                     | Big O notation for Selection sort                   |
+| `3-quick_sort.c`          | Quick sort implementation                           |
+| `3-O`                     | Big O notation for Quick sort                       |
 
 ---
 
-## Compilation
+## 🧩 Data Structures
+
+### 🔗 Doubly Linked List
+
+```c
+typedef struct listint_s
+{
+    const int n;
+    struct listint_s *prev;
+    struct listint_s *next;
+} listint_t;
+```
+
+---
+
+## 🔢 Sorting Algorithms Implemented:
+
+### 🫧 Bubble Sort
+
+* Compares adjacent elements and swaps them if they’re in the wrong order
+* Larger values "bubble" to the end 🫧
+* ✅ Stable sorting algorithm
+
+**⏱️ Time Complexity:**
+
+* Best case: O(n)
+* Average case: O(n²)
+* Worst case: O(n²)
+
+---
+
+### 🧩 Insertion Sort (Doubly Linked List)
+
+* Builds the sorted list one element at a time
+* Great for small or nearly sorted lists
+* ✅ Stable sorting algorithm
+
+**⏱️ Time Complexity:**
+
+* Best case: O(n)
+* Average case: O(n²)
+* Worst case: O(n²)
+
+---
+
+### 🎯 Selection Sort
+
+* Selects the smallest element and places it in its correct position
+* Same number of comparisons every time
+* ❌ Not stable by default
+
+**⏱️ Time Complexity:**
+
+* Best case: O(n²)
+* Average case: O(n²)
+* Worst case: O(n²)
+
+---
+
+### ⚡ Quick Sort
+
+* Uses a divide-and-conquer strategy
+* Picks a pivot and partitions the array
+* Very fast on average 🚀
+* ❌ Not stable by default
+
+**⏱️ Time Complexity:**
+
+* Best case: O(n log n)
+* Average case: O(n log n)
+* Worst case: O(n²)
+
+---
+
+## 🧪 Compilation & Testing
+
+Example compilation command:
+
 ```bash
-gcc -Wall -Wextra -Werror -pedantic *.c -o sort
+gcc -Wall -Wextra -Werror -pedantic *.c print_array.c print_list.c -o sort
+```
+
+> ℹ️ `print_array.c` and `print_list.c` are provided during correction.
+
+---
+
+## 📌 Big O Notation Files
+
+Each `*-O` file contains:
+
+* 📄 One Big O notation per line
+* 🧮 Ordered as: best, average, worst case
+* 🚫 No extra blank lines or spaces
+* ✅ Ends with exactly **one newline**
+
+---
+
+## Authors:
+
+* 👩‍💻 **Norah Aljuhani - Implemented Tasks 0 and 1**
+* 👩‍💻 **Manar Althqfi - Implemented Tasks 2 and 3**
+
+---
